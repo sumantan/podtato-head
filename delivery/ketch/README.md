@@ -84,7 +84,7 @@ ketch app create podtato --pool dev
 Ketch can deploy an application through a pre-built container image or directly from code. The example that follows uses the former method.
 
 ```bash
-ketch app deploy podtato --image ghcr.io/podtato-head/podtatoserver:v0.1.1
+ketch app deploy podtato --image ghcr.io/sumantan/podtatoserver:v0.1.1
 ```
 
 We can list all the applications created through Ketch.

@@ -33,7 +33,7 @@ images:
   server: # v0.1.2
     description: "The hello web server"
     imageType: "docker"
-    repository: "ghcr.io/podtato-head/podtatoserver"
+    repository: "ghcr.io/sumantan/podtatoserver"
     digest: "sha256:3fe55b2bc6c9a31a2acdd7ee5c64cb076a267c11443d9bb12c1467272bf9af07"
 
 install:
