@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-REPOSITORY="ghcr.io/sumantan/podtato-head"
+REPOSITORY="ghcr.io/sumantan"
 declare -a TAGS=("0.1.0" "0.1.1" "0.1.2")
 for TAG in "${TAGS[@]}"
 do
