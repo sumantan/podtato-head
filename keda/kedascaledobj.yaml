@@ -1,0 +1,21 @@
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: prometheus-scaledobject
+  namespace: demospace
+  labels:
+    deploymentName: helloservice
+spec:
+  scaleTargetRef:
+    name: helloservice
+  # pollingInterval: 15
+  # cooldownPeriod:  30
+  minReplicaCount: 1
+  maxReplicaCount: 100
+  triggers:
+    - type: prometheus
+      metadata:
+        serverAddress: http://prometheus-service.demospace.svc.cluster.local:9090
+        metricName: http_requests_total
+        threshold: '3'
+        query: sum(rate(http_requests_total[2m]))
