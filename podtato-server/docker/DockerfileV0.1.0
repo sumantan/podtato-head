@@ -27,7 +27,10 @@ WORKDIR /dist
 RUN cp /build/podtatoserver .
 
 # Build a small image
-FROM scratch
+# FROM scratch
+
+# Updated to use busybox for tools
+FROM busybox:latest
 
 COPY --from=builder /dist/podtatoserver /
 COPY /static  /static
