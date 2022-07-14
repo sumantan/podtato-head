@@ -29,8 +29,8 @@ RUN cp /build/podtatoserver .
 # Build a small image
 # FROM scratch
 
-# Updated to use busybox for tools
-FROM busybox:latest
+# Updated to use curl base image
+FROM curlimages/curl:latest
 
 COPY --from=builder /dist/podtatoserver /
 COPY /static  /static
